@@ -1,0 +1,18 @@
+<html>
+<head><title>What is the total cost of setting up a datacenter</title></head>
+<body>
+	<div class="entry-meta"><a class="entry-date published">January 17, 2016</a></div>
+
+<p>Depends on the scope of the question, actually. Some people would mean "building up a new facility", others just merely "setting up my company's infrastructure in existing facility".
+
+<p>But the biggest cost factor in the datacenter in any case is the power. Datacenter equipment (computers and networking gear) consume power to move the data bits around and get very hot in the process so you need to spend some power to cool them down.
+
+<p>The next cost factor is connectivity. These data bits you move in your datacenter around should come from somewhere and should go somewhere else after you process them. To move the bits in and out you need bandwidth, you need diversity and you need actual wires and fibers.
+
+<p>Everything else is basically a constant. If you're building a facility from scratch you'll need to buy land, build the building, purchase power distribution equipment, HVAC equipment, generators, battery backups, fuel tanks, network gear, racks, etc. This is a shopping list with quite well defined prices for the parts and labor. But then you'll need to sign a contract with the local power company(ies) and connectivity providers. And you're going to pay them every month afterwards. And, generally, the more you use (the more successful your business is) the more you pay. And if you misjudged you can get out of business pretty quickly. So pay much more attention to the contract wordings with the power company and connectivity providers than how much money you've paid Schneider Electric for the PDUs. You can easily overpay Schneider 2x for their equipment and it will hurt you for a few months. Do something wrong in the power contract and you're doomed. Run models, try to predict the consumption patterns, whatif analysis, you know the drill.
+
+<p>For example, you did the market analysis and figured out that you can make considerable money on the lower end of the spectrum, offering cheap racks in the shared floor configuration (dense rows of racks without cages subleased rack by rack to small companies for cheap). What you probably didn't take into account that "poor" companies, which you're going to attract with your offering, typically use equipment 2-3 generations behind current. There is a lot of many small companies still using Pentium4-based Xeon server processors, which consume much more power per 1Ghz than current Intel CPUs and run much hotter while doing so. Your power allocation of 15A per rack makes it impossible to put more than 5-7 servers in a 40U rack and your utilization is off the charts immediately. You have an essentially empty datacenter where you can't install a single server, because you're at the contractual power limit. End of business.
+
+<p>Same (but even more complex) is with the connectivity. Depending on your business though, you may delegate this headache to your customers. Just build the datacenter close to connectivity hubs, make sure that it's easy to reach them (there's space in the fiber collectors, etc), talk to connectivity providers making sure they accept new customers at these locations and then let your customers sign actual contracts. You can't do this with power, but at least you can do with connectivity. You may lose some revenue opportunity here though.
+</body>
+</html>
